@@ -1,70 +1,79 @@
-# React + TypeScript + Vite
+# Shibansh Sahoo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Banner](https://raw.githubusercontent.com/ShibanshL/shibanshSahoo/refs/heads/master/Images/Shibansh_Sahoo_Sub_1.png) <!-- Replace with your image path -->
 
-Currently, two official plugins are available:
+## 🧾 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hello, I'm Shibansh Sahoo and this is my submission.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🙋 Submitted by
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Shibansh Sahoo**  
+📧 shibansh.w@gmail.com  
+🔗 [GitHub](https://github.com/ShibanshL) • [Portfolio](https://shibansh-s.vercel.app/) <!-- Optional -->
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🖼️ Screenshots
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+| Page | Screenshot |
+|------|------------|
+| Landing Page | ![Landing](https://raw.githubusercontent.com/ShibanshL/shibanshSahoo/refs/heads/master/Images/Shibansh_Sahoo_Sub_1.png) |
+| Order List Page | ![Order](https://raw.githubusercontent.com/ShibanshL/shibanshSahoo/refs/heads/master/Images/Shibansh_Sahoo_Sub_2.png) |
+| Mobile View | ![Mobile](https://raw.githubusercontent.com/ShibanshL/shibanshSahoo/refs/heads/master/Images/Shibansh_Sahoo_Sub_4.png) |
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+> Replace the image paths with your actual screenshot files from the project.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# Shibansh_Sahoo_Submission
+
+## 🖐 Accesibilty
+![Project Banner](https://raw.githubusercontent.com/ShibanshL/shibanshSahoo/refs/heads/master/Images/Shibanhs_Sahoo_Sub_3.png) 
+---
+
+- The Icons within the Blue box are to open and close the sidebar and notification bar.
+- The Icon within the Red box is to trigger dark or light mode.
+- The Icon within the Cyan box is to navigate to the orderlist page.
+
+
+You can navigate back to home if you click on the Site icon on the sidebar.
+
+
+## ✨ Features
+
+- ⚡ Fully responsive layout
+- 🎨 Custom UI components
+- 🔍 Accessible design (ARIA roles, keyboard nav)
+- 📱 Mobile-first approach
+- 🌙 Dark mode support (if any)
+- ⚙️ Any other notable feature
+
+---
+
+## 🛠️ Built With
+
+| Tech        | Description                      |
+|------------ |----------------------------------|
+| HTML5       | Markup language                  |
+| CSS3 / SCSS | Styling & layout                 |
+| JavaScript  | Core interactivity               |
+| React       | React                            |
+| TailwindCSS | UI framework                     |
+| Redux       | Global State Management          |
+
+---
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/project-name.git
+
+# 2. Navigate into the directory
+cd project-name
+
+# 3. Open with Live Server (or use any static server)
+# If using VS Code:
+Right-click → "Open with Live Server"
