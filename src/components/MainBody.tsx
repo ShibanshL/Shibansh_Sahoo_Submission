@@ -12,27 +12,28 @@ import {  CiSearch } from "react-icons/ci";
 import { MdDarkMode,MdLightMode } from "react-icons/md";
 import NotFound from './NotFound';
 import { useNavigate } from 'react-router';
+import useScreenWidth from '../customHook/getScreenWidth';
 
 function MainBody() {
   const theme = useSelector((state:any) => state.toggleSite.theme)
   const dispatch = useDispatch()
   const nav = useNavigate()
+  const screenWidth = useScreenWidth()
   return (
     <div className={`centerCol MainBody ${theme && 'darkMode'}`}
     style={{transition:'0.5s ease'}}
     >
       <div className="centerRow Header">
         <div role='button' onClick={() => dispatch(toggleSidebar())} className="centerRow PC HeaderIcon">
-          <PiSidebarDuotone color={!theme?'black':'white'} size={15}/>
+          <PiSidebarDuotone color={!theme?'black':'white'} size={screenWidth < 800? 25 :15}/>
         </div>
         <div className="centerRow HeaderIcon Star">
-          <FaRegStar color={!theme?'black':'white'} size={15}/>
+          <FaRegStar color={!theme?'black':'white'} size={screenWidth < 800? 30 :15}/>
         </div>
         <div className="centerRow Breadcrumbs">
           <h1 className={`${!theme?'text-[rgba(0,0,0,0.2)]':'text-[rgba(255,255,255,0.2)]'}`}>Dashboards</h1>
           <h1 className={`${!theme?'text-[rgba(0,0,0,0.8)]':'text-[rgba(255,255,255,0.8)]'}`}>/</h1>
           <h1 className={`${!theme?'text-[rgba(0,0,0,0.8)]':'text-[rgba(255,255,255,0.8)]'}`}>Default</h1>
-          {/* {sideBar ? 'yes':'no'} */}
         </div>
         <div className="centerRow HeaderControls">
           <div className="centerRow HeaderSearch">
@@ -50,20 +51,20 @@ function MainBody() {
           </div>
           <div onClick={() => dispatch(toggleTheme())} className="centerRow HeaderIcon">
             {!theme && <div className="centerRow DarkMode">
-              <MdDarkMode color={!theme?'black':'white'} size={15}/>
+              <MdDarkMode color={!theme?'black':'white'} size={screenWidth < 800? 25 :15}/>
             </div>}
             <div className="centerRow LightMode">
-              <MdLightMode color={!theme?'black':'white'} size={15}/>
+              <MdLightMode color={!theme?'black':'white'} size={screenWidth < 800? 25 :15}/>
             </div>
           </div>
           <div role='button' onClick={() => nav('/order')} className="centerRow HeaderIcon Timer">
-            <CiTimer color={!theme?'black':'white'} size={15}/>
+            <CiTimer color={!theme?'black':'white'} size={screenWidth < 800? 25 :15}/>
           </div>
           <div className="centerRow HeaderIcon NotificationICon">
-            <IoMdNotificationsOutline color={!theme?'black':'white'} size={15}/>
+            <IoMdNotificationsOutline color={!theme?'black':'white'} size={screenWidth < 800? 25 :15}/>
           </div>
           <div role='button' onClick={() => dispatch(toggleNotifybar())} className="centerRow HeaderIcon">
-            <PiSidebarDuotone color={!theme?'black':'white'} size={15}/>
+            <PiSidebarDuotone color={!theme?'black':'white'} size={screenWidth < 800? 25 :15}/>
           </div>
         </div>
       </div>

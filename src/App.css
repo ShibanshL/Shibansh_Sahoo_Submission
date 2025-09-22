@@ -1438,7 +1438,7 @@
       justify-content: flex-end;
     }
 
-    .Star, .HeaderSearch, .Timer, .NotificationICon{
+    .Star, .HeaderSearch, .NotificationICon{
       display: none;
     }
 
@@ -1459,7 +1459,25 @@
 
   .MainBody{
     padding: 0 15px 0 15px !important;
+
+      .Header{
+          .HeaderIcon{
+            width: 40px !important;
+            height: 40px !important;
+          }
+
+          .HeaderControls{
+             .HeaderIcon{
+                width: 40px !important;
+                height: 40px !important;
+              }
+          }
+        }
+
       .MainbodySub{
+
+       
+
         .HomePage{
           .eCommerce{
             height: 800px !important;
