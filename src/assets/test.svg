@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 291" width="600" height="291">
+	<title>image</title>
+	<style>
+		.s0 { fill: none;stroke: #a8c5da;stroke-miterlimit:100;stroke-width: 5 } 
+		.s1 { fill: none;stroke: #000000;stroke-miterlimit:100;stroke-width: 5 } 
+	</style>
+	<path id="Layer 2" class="s0" d="m81 183c0 0 61.69-52.86 132-48 70.31 4.86 125.43 46.39 193 37 67.57-9.39 144.01-76.78 163-71"/>
+	<path id="Layer 1" class="s1" d="m81 155c0 0 35.29 34.47 126.97 32.79 74.92 0 145.36-37.46 175.55-46.96 35.42-18.15 171.37-35.75 185.48-19.83"/>
+</svg>

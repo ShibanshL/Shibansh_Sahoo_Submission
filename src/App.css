@@ -1,0 +1,1762 @@
+:root{
+  --background:white;
+  --strong:black;
+  --lightStrong:rgba(0,0,0,0.4);
+  --veryLightStrong:rgba(0,0,0,0.2);
+  --cardBackground:rgb(247, 249, 251);
+  --D1_ecomCards:rgb(40, 40, 40);
+  --headerSearchBar:rgb(243, 243, 243);
+  --barChartParent:#ccdce7;
+  /* --border:1px sol */
+  /* --D2_ecomCards:;/ */
+}
+
+.darkMode_1{
+  --background:rgb(28, 28, 28);
+  --strong:white;
+  --lightStrong:rgba(255, 255, 255, 0.4);
+  --veryLightStrong:rgba(255,255,255,0.2);
+  --cardBackground:rgb(40, 40, 40);
+  --D_ecomCards:rgb(227, 245, 255);
+  --headerSearchBar:rgb(50, 50, 50);
+  --barChartParent:#677580;
+  /* --D2_ecomCards:; */
+}
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.centerRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.centerCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.HomeCointainer{
+  height: auto;
+  width: 100vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: var(--background);
+  /* background: pink; */
+
+
+  .MobileSideBar, .MobileSideBarHide, .MobileNotificationBar, .MobileNotificationBarHide{
+    display: none;
+  }
+
+  .Sidebar{
+    height: auto;
+    width: 200px;
+    /* border: 1px solid red; */
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 15px 15px 15px;
+    transition: 0.5s ease;
+
+    .SiteLogo{
+      height: 60px;
+      width: 100%;
+      justify-content: flex-start;
+      /* align-items: flex-start; */
+      /* background: pink; */
+      gap:7px;
+
+      .SiteLogoIcon{
+        height: 20px;
+        width: 20px;
+        border-radius: 50px;
+        overflow: hidden;
+        background: var(--cardBackground);
+        cursor: pointer;
+      }
+
+      .SiteLogoIcon:hover {
+
+        background: var(--veryLightStrong);
+      }
+
+      h1{
+       color:var(--strong);
+        font-size: 12px;
+      }
+    }
+
+    .Favorites{
+      width: 100%;
+      height: auto;
+      align-items: flex-start;
+      /* background: pink; */
+
+      .Favorites_Heading{
+        width: 85%;
+        height: 30px;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        /* padding-left: 1px; */
+        /* background: palegreen; */
+
+        h1,h2{
+          font-size: 12px;
+          border-radius: 8px;
+          padding: 5px;
+          cursor:pointer;
+          color: var(--lightStrong);
+        }
+
+        h2{
+          color:var(--veryLightStrong);
+        }
+
+        h1:hover, h2:hover{
+          background: gray;
+        }
+      }
+
+      .Favorite_Options{
+        width: 100%;
+        height: 85px;
+        /* background: cyan; */
+        justify-content: flex-start;
+
+        .Favorite_Op_Indv{
+          width: 100%;
+          height: 30px;
+          /* border: 1px solid yellow; */
+          justify-content: flex-start;
+          gap:2px;
+
+          .Favorite_Icon{
+            height: 100%;
+            width: 20px;
+            /* background: red; */
+          }
+
+          h1{
+           color:var(--strong);
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .Dashboard, .Pages{
+      height: auto;
+      width: 100%;
+      justify-content: flex-start;
+      margin-bottom: 18px;
+      /* background: red; */
+
+      .DashboardHeading, .PagesHeading{
+        width: 100%;
+        height: 30px;
+
+        h1{
+          font-size: 12px;
+          color:var(--lightStrong);
+        }
+      }
+
+      .Dashboardoptions, .PagesOptions{
+        height: auto;
+        width: 100%;
+        /* background: red; */
+        /* border: 1px solid red; */
+        gap:5px;
+
+        .DashCard{
+          height: 25px;
+          width: 100%;
+          justify-content: flex-start;
+
+          .DashRightIcon{
+            height: 100%;
+            width: 25px;
+            padding-left: 5px;
+            /* justify-content: flex-end; */
+            /* background: pink; */
+
+          }
+
+          .Dash_Indv_Card{
+            height: 100%;
+            flex:0 1 calc(100% - 25px);
+            justify-content: flex-start;
+            gap:3px;
+
+            h1{
+             color:var(--strong);
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    .Pages{
+      height: auto;
+      width: 100%;
+      justify-content: flex-start;
+
+      .PagesOptions{
+        justify-content: flex-start;
+
+        .DashCardOpen{
+          height: 160px;
+          /* background: pink; */
+          width: 100%;
+          justify-content: flex-start;
+          /* gap: 2px; */
+          /* align-items: flex-start; */
+
+          .DashCardOpenList{
+            align-items: flex-start;
+            width: 100%;
+            padding-left: 45px;
+            flex:0 1 calc(100% - 25px);
+            gap:8px;
+
+            h1{
+             color:var(--strong);
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .MainBody{
+    /* flex:0 1 calc(100% - 380px); */
+    flex: 1 1 auto;  
+    min-width: 0; 
+    height:auto;
+    padding: 0 30px 0 30px;
+    border-left: 1px solid var(--veryLightStrong);
+    border-right: 1px solid var(--veryLightStrong);
+    transition: 0.5s ease;
+    /* background: pink; */
+
+    .Header{
+      width: 100%;
+      height: 60px;
+      /* border:1px solid orange; */
+      justify-content: flex-start;
+      gap:5px;
+
+      .HeaderIcon{
+        height: 30px;
+        width: 30px;
+        /* background: red; */
+        border-radius:5px;
+        position: relative;
+        cursor: pointer;
+        /* transition: 0.5s ease; */
+
+        .LightMode, .DarkMode{
+          height: 100%;
+          width: 100%;
+          border-radius:5px;
+          /* background: rgb(28, 28, 28); */
+
+        }
+
+        .DarkMode{
+          background: white;
+          /* background: var(--strong); */
+          position: absolute;
+          top:o;
+        }
+      }
+
+      .HeaderIcon:hover{
+        background: var(--lightStrong);
+      }
+
+      .Breadcrumbs{
+        height: 100%;
+        flex:0 1 calc(100% - 330px);
+        font-size: 12px;
+        padding-left: 15px;
+        justify-content: flex-start;
+        gap:15px;
+      }
+
+      .HeaderControls{
+        height: 100%;
+        width: 320px;
+        /* background: pink; */
+        gap:5px;
+
+        .HeaderSearch{
+          height: 100%;
+          flex:0 1 calc(100% - 120px);
+          padding-right: 20px;
+
+          .SearchBar{
+            height: 30px;
+            width: 100%;
+            background: var(--headerSearchBar);
+            /* border: 1px solid var(--veryLightStrong);; */
+            border-radius: 8px;
+
+            .SearchIcon, .CommandIcon {
+              height: 100%;
+              width: 30px;
+            }
+
+            .SearchInput{
+              height: 100%;
+              /* background: yellowgreen; */
+              flex:0 1 calc(100% - 60px);
+             
+
+              input{
+                height: 100%;
+                width: 100%;
+                border: none;
+                outline: none;
+                font-size: 12px;
+                color:var(--strong);
+              }
+
+              input::placeholder{
+                color:var(--veryLightStrong);
+              }
+            }
+          }
+          /* border: 1px solid red; */
+          /* background: red; */
+          /* border:2px solid gray;
+          border-radius: 5px;; */
+        }
+
+        .HeaderIcon{
+          height: 30px;
+          width: 30px;
+          /* background: red; */
+          border-radius:5px;
+        }
+
+        .HeaderIcon:hover{
+          background: var(--lightStrong);
+        }
+      }
+    }
+
+    .MainbodySub{
+      width: 100%;
+      height: auto;
+
+      .NotFound{
+        width:100%;
+        height:130vh;
+
+        h1{
+          color:var(--strong);
+          font-size: 50px;
+        }
+
+      }
+
+      .HomePage{
+        width: 100%;
+        height: auto;
+
+        .eCommerce, .Revenue, .Products{
+          width: 100%;
+          height: 260px;
+          /* border:1px solid pink; */
+        }
+
+        .Products, .Revenue{
+          height: 300px;
+        }
+
+        .eCommerce{
+          padding: 0;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+
+          h1{
+            font-size: 12px;
+            font-weight: 500;
+           color:var(--strong);
+          }
+
+          .ecommerCards{
+            height: 100%;
+            width: 100%;
+            gap:30px;
+
+            .ecommerceInfo, .ecommerceBarChart{
+              height: 100%;
+              /* width: 50%; */
+              /* background: pink; */
+              border-radius: 15px;
+              align-items: flex-start;
+              justify-content: flex-start;
+              /* padding: 20px; */
+
+              h1{
+                color:var(--strong);
+                font-weight: 500;
+                font-size: 13px;
+              }
+
+              .StackedBarchart{
+                width: 100%;
+                flex:1;
+                justify-content: flex-start;
+                padding-bottom: 10px;
+                gap:20px;
+
+                .YAxis{
+                  justify-content: flex-end;
+                  height: 100%;
+                  width: 20px;
+                  gap:20px;
+                  /* background-color: pink; */
+                  position: relative;
+
+                  h1{
+                    color:var(--veryLightStrong)
+                  }
+                }
+
+                .XAxis{
+                  height: 100%;
+                  /* background: red; */
+                  flex:0 1 calc(100% - 20px);
+                  /* overflow-x: auto; */
+                  position: relative;
+
+                  .ChartBackground{
+                    height: 100%;
+                    width:100%;
+
+                    .ChartBars{
+                      width: 100%;
+                      height: calc(100% / 4);
+                      border-bottom: 1px solid var(--veryLightStrong);
+                    }
+                  }
+
+                  .Charts{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top:0;
+                    /* gap:25px; */
+                    justify-content: flex-start;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    justify-content: space-around;
+
+                    .StackedCharts{
+                      height: 100%;
+                      width: 18px;
+                      /* background: pink; */
+                      position: relative;
+                      align-items: flex-end;
+                      justify-content: flex-end;
+
+                      .StackedBars{
+                        width: 100%;
+                        background: var(--barChartParent);
+                        border-top-right-radius: 5px;
+                        border-top-left-radius: 5px;
+                        justify-content: flex-end;
+
+                        .ChildBar{
+                          width: 100%;
+                          border-top-right-radius: 5px;
+                          border-top-left-radius: 5px;
+                          background: #a8c5ca;
+                        }
+
+                      }
+
+                      .ChartName{
+                        position: absolute;
+                        bottom: -20px;
+
+                        h1{
+                          color:var(--veryLightStrong)
+                        }
+                      }
+                    }
+                    /* background: red; */
+                  }
+                }
+                /* background: red; */
+              }
+            }
+
+            .ecommerceInfo{
+              width:400px;
+            }
+
+            .ecommerceBarChart{
+              flex:0 1 calc(100% - 400px);
+              background: var(--cardBackground);
+              padding: 20px;
+            }
+
+            .ecommerceInfo{
+              flex-wrap: wrap;
+              justify-content: space-between;
+              /* gap:30px; */
+
+              .ecommerceInfoCards{
+                height: 50%;
+                width: 50%;
+                /* padding: 0; */
+
+                .ecommerceCardsSub{
+                  height: 85%;
+                  width:92%;
+                  /* background: red; */
+                  border-radius: 15px;;
+                  padding: 20px;
+                  align-items: flex-start;
+                  justify-content: space-between;
+
+                  h1{
+                    font-size: 12px;
+                  }
+
+                  .CardInfo{
+                    height: 30px;
+                    width: 100%;
+                    /* background: pink; */
+                    position: relative;
+                    /* align-items: flex-end; */
+
+                   
+
+                    .cardTrendTop, .cardTrendReverse{
+                      height: 100%;
+                      width: 100%;
+                      cursor: pointer;
+                      /* width: 50px;; */
+                      /* background: yellow; */
+
+                       h2{
+                          font-size: 20px;
+                        }
+
+                      .CardTrend{
+                        height: 100%;
+                        flex: 1;
+                        /* background: green; */
+                        justify-content: flex-end;
+                        gap:5px;
+
+                        h3{
+                          font-size: 11px;
+                        }
+                      }
+                    }
+
+                    .cardTrendReverse{
+                      .CardTrend{
+                        justify-content: flex-start;
+                      }
+                    }
+
+                    .cardTrendTop{
+                      position: absolute;
+                    }
+
+                    .cardTrendTop:hover{
+                      opacity: 0;
+                    }
+                  }
+                }
+                /* background: orange; */
+              }
+            }
+          }
+          
+        }
+
+        .Revenue, .Products{
+          gap:30px;
+            /* background: orange; */
+            .RevenueLineChart, .ProductSales{
+              height: 100%;
+              /* width: 590px; */
+              flex:0 1 calc(100% - 200px);
+              border-radius: 15px;
+              background: var(--cardBackground);
+              /* background: yellow; */
+            }
+
+            .RevenueLineChart{
+              justify-content: flex-start;
+              padding: 20px;
+
+              .RevenueCardInfo{
+                width: 100%;
+                height: 20px;
+                /* background: orange; */
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap:15px;
+
+                h1{
+                  font-size: 13px;
+                  font-weight: 500;
+                  color:var(--strong);
+                }
+
+                .RevenueHeading{
+                  height: 100%;
+                  width: 350px;
+                  padding:0 15px 0 15px;
+                  /* background: pink; */
+                  justify-content: flex-start;
+                  border-left: 1px solid var(--veryLightStrong);
+
+                  .WeeklyInfo{
+                    height: 100%;
+                    width: 50%;
+                    /* width: 150px; */
+                    /* background: red; */
+                    justify-content: flex-start;
+                    gap:10px;
+
+                    .Dot{
+                      height: 5px;
+                      width: 5px;
+                      border-radius: 50px;
+                      background: var(--strong);
+                    }
+
+                    h1{
+                      font-size: 11px;
+                      font-weight: 300;
+                      color:var(--strong);
+
+                      span{
+                        font-weight: 500;
+                      }
+                    }
+                  }
+
+                }
+              }
+
+              .LineChart{
+                width: 100%;
+                height: 100%;
+                /* flex:0 1 calc(100% - 20px); */
+                /* background: cyan; */
+                justify-content: flex-start;
+                padding-bottom: 15px;
+                padding-right: 10px;
+                gap:25px;
+
+                .YAxis{
+                  justify-content: flex-end;
+                  height: 100%;
+                  width: 20px;
+                  gap:30px;
+                  /* background-color: pink; */
+                  position: relative;
+
+                  h1{
+                    color:var(--veryLightStrong)
+                  }
+                }
+
+                .XAxis{
+                  height: 100%;
+                  /* background: red; */
+                  flex:0 1 calc(100% - 20px);
+                  /* overflow-x: auto; */
+                  position: relative;
+
+                  .ChartBackground{
+                    height: 100%;
+                    width:100%;
+                    padding-bottom: 10px;
+
+                    .ChartBars{
+                      width: 100%;
+                      height: calc(100% / 4);
+                      border-bottom: 1px solid var(--veryLightStrong);
+                    }
+                  }
+
+                  .Charts{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top:0;
+                    gap:25px;
+                    justify-content: flex-start;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    /* background: red; */
+                    /* justify-content: space-around; */
+
+                    .ChartSub{
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      /* background: pink; */
+                     
+                    }
+                    
+
+                    .StackedCharts{
+                      height: 100%;
+                      width: calc(100% / 6);
+                      /* background: pink; */
+                      position: relative;
+                      align-items: flex-start;
+                      justify-content: flex-end;
+
+                      .ChartName{
+                        position: absolute;
+                        bottom: -20px;
+
+                        h1{
+                          color:var(--veryLightStrong)
+                        }
+                      }
+                    }
+                    /* background: red; */
+                  }
+                }
+              }
+            }
+
+            .RevenueMap, .TotalSales{
+              height: 100%;
+              width:200px;
+              /* flex: 0 1 calc(100% - 590px); */
+              border-radius: 15px;
+              background: var(--cardBackground);
+              /* background: red; */
+            }
+
+            .RevenueMap{
+              padding: 20px;
+              justify-content: flex-start;
+
+              .RevenueHead{
+                width: 100%;
+                height: 130px;
+                /* background: yellow; */
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                h1{
+                  font-size: 13px;
+                  font-weight: 500;
+                  color:var(--strong)
+                }
+
+                .Map{
+                  width: 100%;
+                  flex:1 1 auto;
+                  padding-bottom: 20px;
+                  justify-content: flex-start !important;
+                  /* background: cyan; */
+                }
+              }
+
+              .RevenueBody{
+                width: 100%;
+                flex:0 1 calc(100% - 130px);
+                justify-content: flex-start;
+                gap:5px;
+
+                .IndividualRev{
+                  width: 100%;
+                  height: 25px;
+                  /* justify-content: ; */
+
+                  .RevenueInfo{
+                    width:100%;
+                    justify-content: space-between;
+
+                    h1{
+                      font-size: 11px;
+                      font-weight: 300;
+                      color:var(--strong)
+                    }
+                  }
+
+                  .RevenueLevel{
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 50px;
+                    justify-content: flex-start;
+                    background: var(--barChartParent);
+                  }
+                  /* background: pink; */
+                }
+              }
+              /* background: pink; */
+            }
+        }
+        
+        .Products{
+          .ProductSales{
+            padding: 20px;
+
+
+            h1{
+              font-size: 13px;
+              color:var(--strong);
+              font-weight: 600;
+            }
+
+            .ProductSalesTable{
+              width: 100%;
+              flex:1;
+
+                .ProductTableSub{
+                  height: 100%;
+                  width: 100%;
+                
+                /* background: pink; */
+
+                .ProductTableHead{
+                  width: 100%;
+                  height: 45px;
+                  /* background: pink; */
+                  justify-content: flex-start;
+                  border-bottom: 1px solid var(--veryLightStrong);
+
+                  .Name,.Price,.Quantity,.Amount{
+                    height: 100%;
+                    /* border:1px solid black; */
+                    justify-content: flex-start;
+                    
+                    h1{
+                      font-size: 11px;
+                      font-weight: 400;
+                      color:var(--veryLightStrong)
+                    }
+
+                  }
+
+                  .Name{
+                    width: 190px;
+                  }
+
+                  .Price,.Quantity,.Amount{
+                    flex:0 1 calc((100% - 190px)/3);
+                  }
+
+                }
+
+                .ProductTableList{
+                  width: 100%;
+                  flex:0 1 calc(100% - 50px);
+
+                  .ProductTableBody{
+                    width: 100%;
+                    height: 33px;
+                    /* background: pink; */
+                    justify-content: flex-start;
+                    /* border-bottom: 1px solid var(--veryLightStrong); */
+
+                    .Name,.Price,.Quantity,.Amount{
+                      height: 100%;
+                      /* border:1px solid black; */
+                      justify-content: flex-start;
+                      
+                      h1{
+                        font-size: 11px;
+                        font-weight: 400;
+                        color:var(--strong)
+                      }
+
+                    }
+
+                    .Name{
+                      width: 190px;
+                    }
+
+                    .Price,.Quantity,.Amount{
+                      flex:0 1 calc((100% - 190px)/3);
+                    }
+                  }
+                }
+              }
+
+            } 
+          }
+
+          .TotalSales{
+            padding: 20px;
+
+            .TotalSalesHead{
+              width: 100%;
+              height: 160px;
+              justify-content: flex-start;
+              align-items: flex-start;
+              /* background: orange; */
+
+              h1{
+                font-size: 13px;
+                font-weight: 500;
+                color:var(--strong);
+              }
+
+              .RingChart{
+                width: 100%;
+                flex: 1 1 auto;
+                /* background: red; */
+              }
+            }
+
+            .TotalSalesBody{
+              width: 100%;
+              flex:0 1 calc(100% - 160px);
+              gap:5px;
+
+              .SalesIndvRow{
+                width: 100%;
+                height: 20px;
+                /* background: pink; */
+                justify-content: space-between;
+                padding: 0 5px 0 5px;
+                cursor:pointer;
+                border-radius: 5px;
+
+                .SalesInfo{
+                  height: 100%;
+                  width: 85px;
+                  /* background: purple; */
+                  justify-content: flex-start;
+                  gap:5px;
+
+                  .Dot{
+                    height: 5px;
+                    width: 5px;
+                    border-radius: 50px;
+                    /* background: black; */
+                  }
+
+                  h1{
+                    font-size: 11px;
+                    color:var(--strong);
+                  }
+                }
+
+                h2{
+                  font-size: 11px;
+                  color:var(--strong);
+                }
+              }
+
+              .SalesIndvRow:hover{
+                background: var(--veryLightStrong);
+              }
+            }
+          }
+        }
+      }
+
+      .OrderList{
+        width: 100%;
+        height:auto;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background: var(--background);
+        transition: 0.5s ease;
+
+
+        .OrderHeading{
+          width: 100%;
+          height: 40px;
+          /* border:1px solid salmon; */
+          justify-content: flex-start;
+
+          h1{
+            font-weight: 500;
+            font-size: 12px;
+           color:var(--strong);
+          }
+        }
+
+        .OrderListSearch{
+          width: 100%;
+          height: 40px;
+          border-radius: 5px;
+          background: var(--cardBackground);
+          border: 10px;
+          justify-content: space-between;
+          padding: 0 10px 0 10px;
+
+          .SearchOptions{
+            height: 100%;
+            width: 120px;
+            /* background: red; */
+            justify-content: flex-start;
+            gap:8px;
+
+            .SearchSortIcons{
+              height: 25px;
+              width: 25px;
+              border-radius: 8px;
+            }
+
+            .SearchSortIcons:hover{
+              background: var(--veryLightStrong);
+            }
+          }
+
+          .SearchInput{
+            /* height: 100%; */
+            height: 25px;
+            border-radius: 5px;
+            width: 150px;
+            border:1px solid var(--veryLightStrong);;
+            justify-content: flex-start;
+            /* align-items: flex-start;; */
+            overflow: hidden;
+            /* padding-right: 5px; */
+            /* padding-left: 25px; */
+
+            .SearchIcon{
+              height: 100%;
+              width: 25px;
+              min-width: 25px;
+              /* border: 1px solid black; */
+            }
+
+            input{
+              height: 15px;
+              flex:0 1 calc(100% - 25px);
+              border: none;
+              outline: none;
+              font-size: 12px;
+               color:var(--strong);
+             
+              /* overflow: hidden; */
+
+              /* padding: 5px 5px 5px 5px; */
+            }
+
+            input::placeholder{
+              font-size: 12px;
+                color:var(--veryLightStrong);
+
+            }
+
+
+            /* background: red; */
+          }
+        }
+
+        .OrderListTable{
+          width: 100%;
+          height: 400px;
+          /* border:1px solid purple; */
+          justify-content: flex-start;
+          overflow-x: auto;
+          /* white-space: nowrap;  */
+
+
+          .OrderSub{
+            width: 100%;
+            height: 400px;
+            justify-content: flex-start;
+        
+
+            .TableHead{
+              width: 100%;
+              height: 40px;
+              /* border-bottom: 1px solid greenyellow; */
+              border-bottom: 1px solid var(--lightStrong);
+              justify-content: flex-start;
+              /* align-items: flex-start; */
+
+              .InpBox, .OrderID, .UserName, .ProjectName, .Address, .Date, .Status{
+                height: 100%;
+                font-size: 11px;
+                color:var(--veryLightStrong);;
+                justify-content: flex-start;
+              }
+
+              .InpBox{
+                width: 30px;
+                /* background: pink; */
+
+                .Box{
+                  height: 12px;
+                  width: 12px;
+                  border:1px solid var(--veryLightStrong);
+                  border-radius: 3px;
+                  /* background: pink; */
+                }
+
+                .BoxSelected{
+                  height: 12px;
+                  width: 12px;
+                  background: var(--strong);
+                  border:1px solid var(--veryLightStrong);
+                  border-radius: 3px;
+                }
+              }
+
+              .OrderID{
+                width: 80px;
+                /* background: cyan; */
+              }
+
+              .UserName, .ProjectName{
+                /* border:1px solid brown; */
+                flex:0 1 calc((100% - 590px)/2)
+              }
+
+              .Address{
+                width: 210px;
+                /* background-color: aqua; */
+              }
+
+              .Date{
+                width: 170px;
+              }
+
+              .Status{
+                width: 130px;
+                /* background: violet; */
+              }
+            }
+
+            .TableBody{
+              width: 100%;
+              flex:0 1 calc(100% - 80px);
+              overflow-y: scroll;
+
+              .NoUsersFound{
+                width: 100%;
+                height: 40px;
+                justify-content: flex-start;
+
+                h1{
+                  color:var(--strong)
+                }
+              }
+
+              .TableIndividualRow{
+                width: 100%;
+                height: 40px;
+                justify-content: flex-start;
+                border-bottom: 1px solid var(--veryLightStrong);
+
+                .inpBox, .order, .name, .project, .userAddress, .userDate, .userStatus{
+                  height: 100%;
+                  font-size: 11px;
+                 color:var(--strong);
+                  /* color:rgba(0,0,0,0.2); */
+                  justify-content: flex-start;
+                }
+
+                .inpBox{
+                  width: 30px;
+                  /* background: pink; */
+
+                  .Box{
+                    height: 12px;
+                    width: 12px;
+                    border:1px solid var(--veryLightStrong);
+                    border-radius: 3px;
+                  }
+
+                  .BoxSelected{
+                    height: 12px;
+                    width: 12px;
+                    background: var(--strong);
+                    border:1px solid var(--veryLightStrong);
+                    border-radius: 3px;
+                  }
+                }
+
+                .order{
+                  width: 80px;
+                }
+
+                .name, .project{
+                  flex:0 1 calc((100% - 590px)/2)
+                }
+
+                .name{
+                  justify-content: flex-start;
+                  gap:7px;
+
+                  .UserIcon{
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50px;
+                    /* background: red; */
+                  }
+                }
+
+                .userAddress{
+                  width: 210px;
+                  /* background-color: aqua; */
+                }
+
+                .userDate{
+                  width: 170px;
+
+                  .CalenderIcon{
+                    height: 100%;
+                    width: 20px;
+                    padding-bottom: 2px;
+                    /* background: #E3F5FF; */
+                  }
+                }
+
+                .userStatus{
+                  width: 130px;
+                  gap:7px;
+
+                  .StatusIcon{
+                    height: 5px;
+                    width: 5px;
+                    /* background: red; */
+                    border-radius: 50px;
+                  }
+                  /* background: violet; */
+                }
+
+              }
+
+              .TableIndividualRowLoading{
+                width: 100%;
+                height: 40px;
+                justify-content: flex-start;
+                /* background-color: red; */
+
+                .inpBox{
+                  width: 30px;
+                  justify-content: flex-start;
+                  /* background: pink; */
+
+                  .Box{
+                    height: 12px;
+                    width: 12px;
+                    border:1px solid var(--veryLightStrong);
+                    border-radius: 3px;
+                  }
+                }
+                /* border-bottom: 1px solid rgba(0,0,0,0.2); */
+
+                .LoadingBar {
+                  height: 10px;
+                  flex:0 1 calc(100% - 30px);
+                  /* width: 100%; */
+                  border-radius: 50px;
+                  background:var(--cardBackground);
+                }
+              }
+
+              .TableIndividualRow:hover{
+                background: var(--cardBackground);
+              }
+              /* background: pink; */
+            }
+
+            .Pagination{
+              width: 100%;
+              height: 40px;
+              justify-content: flex-end;
+
+              .PaginateButtons{
+                height: 100%;
+                min-width: 150px;
+                justify-content: flex-end;
+                gap:7px;
+                /* background: red; */
+
+                .PaginateIconsL, .PaginateIconsR, .PaginateNumbers{
+                  height: 20px;
+                  width: 20px;
+                  /* background: orange; */
+                  /* background: var(--cardBackground); */
+                  border-radius: 5px;
+                  font-size: 12px;
+                  color:var(--strong);
+                  cursor: pointer;
+                }
+                
+                .Selected{
+                  background: var(--cardBackground);
+                }
+                /* background: red; */
+              }
+              /* border: 1px solid black; */
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Notification {
+    height: auto;
+    width: 260px;
+    /* border: 1px solid rgb(255, 0, 200); */
+    padding: 22px 0 22px 22px;
+    /* background: pink; */
+    transition: 0.5s ease;
+
+
+    .Notify, .Activity, .Contacts{
+      height: auto;
+      width: 100%;
+      align-items: flex-start;
+    }
+
+    .Notify, .Activity {
+      .Heading{
+       color:var(--strong);
+      }
+      .Notify_Lists, .Activity_Lists{
+        margin-top: 18px;
+        margin-bottom: 18px;
+        height: auto;
+        width: 100%;
+        gap:10px;
+
+        .NotificationIndv{
+          width: 100%;
+          height: 40px;
+          /* border:1px solid yellow; */
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap:8px;
+
+          .NotificationIcon, .ActivityIcon{
+            height: 20px;
+            width: 20px;
+            border-radius: 5px;
+            /* margin-top: 3px; */
+            /* padding-top: 3px; */
+            background: #E3F5FF;
+          }
+
+          .ActivityIcon{
+            height: 20px;
+            width: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: red;
+          }
+
+          .NotificationInfo{
+            height: 100%;
+            flex:0 1 calc(100% - 30px);
+            align-items: flex-start;
+            justify-content: flex-start;
+            
+            h1{
+              font-size: 12px;
+              font-weight: 300;
+             color:var(--strong);
+            }
+
+            h2{
+              font-size: 11px;
+              color: var(--veryLightStrong);
+            }
+            /* background: red; */
+          }
+
+        }
+      }
+    }
+
+    .Contacts{
+      .Heading{
+       color:var(--strong);
+      }
+      .Contacts_Lists{
+        margin-top: 18px;
+        margin-bottom: 18px;
+        height: auto;
+        width: 100%;
+        gap:5px;
+
+        .ContactIndv{
+          width: 100%;
+          height: 30px;
+          /* border:1px solid yellow; */
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap:8px;
+
+          .ContactIcon{
+            height: 20px;
+            width: 20px;
+            border-radius: 10px;
+            background: rgb(0, 255, 179);
+            overflow: hidden;
+          }
+
+          h1{
+            font-size: 12px;
+            font-weight: 300;
+           color:var(--strong);
+          }
+
+        }
+      }
+    }
+
+    .Heading{
+      font-size: 12px;
+      font-weight: 600;
+      /* color:pink; */
+    }
+  }
+}
+
+.Space{
+  width: 100%;
+}
+
+
+.hidden {
+  transform: translateX(-150%); /* or 100% for notifbar */
+  opacity: 0;
+  height: auto;
+  width: 100%;
+  /* width: 0 !important; */
+  /* pointer-events: none; */
+  transition: 0.5s ease;
+}
+
+.hidden_Notify {
+  transform: translateX(150%); /* or 100% for notifbar */
+  opacity: 0;
+  height: auto;
+  width: 100%;
+  /* width: 0 !important; */
+  /* pointer-events: none; */
+  transition: 0.5s ease;
+}
+
+/* Completely remove from layout after animation */
+.hidden.display-none {
+  display: none;
+}
+
+
+.PC_SideBar{
+  display: flex;
+}
+
+.nothidden {
+  transform: translateX(0%); /* or 100% for notifbar */
+  opacity: 1;
+  pointer-events: none;
+   height: auto;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+/* Completely remove from layout after animation */
+.nothidden.notdisplay-none {
+  display: block;
+}
+
+
+.darkMode{
+  background: #1c1c1c;
+}
+
+
+@keyframes pulse {
+  from {
+    background-color: var(--background);
+  }
+  to {
+    background-color: var(--cardBackground);
+  }
+}
+
+@media screen and (max-width:1200px) {
+
+  .PC_SideBar{
+    display: none;
+  }
+ 
+
+ 
+  .HomeCointainer{
+    position:relative;
+    .MobileSideBar, .MobileSideBarHide{
+      display: flex;
+      position:fixed;
+      left:0;
+      height: 100vh;
+      width:200px;
+      z-index: 10;
+      overflow-y: auto;
+      transition: 0.5s ease;
+      box-shadow: 10px -2px 9px -9px var(--veryLightStrong);
+      background: var(--background);
+
+      .SideBarContainer{
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        background: var(--background);
+      }
+
+      .Close{
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        z-index: 2;
+        background: var(--cardBackground);
+        border-radius: 5px;
+        top:15px;
+        right:15px;
+      }
+
+      .Sidebar{
+        background: var(--background);
+       
+      }
+    }
+
+    .MobileSideBarHide{
+      left:-260px;
+    }
+
+    .MobileNotificationBar, .MobileNotificationBarHide{
+      display: flex;
+      position:fixed;
+      height: 100vh;
+      /* left:0; */
+      width:260px;
+      right:0;
+      z-index: 10;
+      transition: 0.5s ease;
+      box-shadow:-10px -2px 9px -9px  var(--veryLightStrong);
+      overflow-y: auto;
+
+      .MobileNotificationContainer{
+        width: 100%;
+        height: auto;
+        background: var(--background);
+        overflow: scroll;
+      }
+
+      /* background: pink; */
+
+
+      .Close{
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        z-index: 2;
+        background: var(--cardBackground);
+        border-radius: 5px;
+        top:15px;
+        right:15px;
+      }
+
+      .Notification{
+        background: var(--background);
+      }
+      /* background: var(--background); */
+    }
+
+    .MobileNotificationBarHide{
+      right:-260px
+    }
+
+    .HeaderControls{
+      justify-content: flex-end;
+      /* background: pink !important; */
+    }
+
+    .Star, .HeaderSearch, .Timer, .NotificationICon{
+      display: none;
+    }
+
+    
+    
+  }
+  
+}
+
+@media screen and (max-width:800px) {
+  .Breadcrumbs{
+    display: none;
+  }
+
+  .HeaderControls{
+    flex:1 1 auto;
+    /* background: pink; */
+  }
+
+  .MainBody{
+    padding: 0 15px 0 15px !important;
+      .MainbodySub{
+        .HomePage{
+          .eCommerce{
+            height: 800px !important;
+            width: 100%;
+            .ecommerCards{
+              flex-direction: column;
+              width: 100%;
+              gap:20px;
+
+              .ecommerceInfo, .ecommerceBarChart{
+                width: 100% !important;
+               }
+
+               .ecommerceInfo{
+                height: 400px;
+                /* background: red !important; */
+                .ecommerceInfoCards{
+                  width: 100%;
+                  height: 100%;
+
+                  .ecommerceCardsSub{
+                    width: 100%;
+                    height: 95% !important;
+                  }
+                }
+               }
+
+               .ecommerceBarChart{
+                flex: 0 1 calc(100% - 400px);
+               }
+            }
+          }
+          .Revenue, .Products{
+            height: 700px !important;
+            flex-direction: column;
+
+            .RevenueLineChart, .ProductSales{
+              height: 400px;
+              width: 100%;
+              /* width: 590px; */
+              /* flex:0 1 calc(100% - 200px); */
+              border-radius: 15px;
+              background: var(--cardBackground);
+
+              .RevenueCardInfo{
+                .RevenueHeading{
+                  display: none;
+                }
+              }
+              /* background: yellow; */
+            }
+
+            .RevenueMap, .TotalSales{
+              flex: 0 1 calc(100% - 400px);
+              /* height: 100%; */
+              width: 100% !important;;
+              /* flex: 0 1 calc(100% - 590px); */
+              border-radius: 15px;
+              background: var(--cardBackground);
+              flex-direction: row !important;
+              /* justify-content: flex-start; */
+              /* background: red !important; */
+            }
+
+            .ProductSales{
+              .ProductSalesTable{
+                height: 90%;
+                /* background: red !important; */
+                width: 100% !important;
+                overflow-x: auto !important;
+                align-items: flex-start !important;
+
+                .ProductTableSub{
+                  justify-content: flex-start !important;
+                  min-width: 500px !important;
+                }
+
+                .ProductTableList{
+                  justify-content: space-around !important;
+                }
+              }
+            }
+
+            .RevenueMap{
+              /* background: cyan !important; */
+              .RevenueHead, .RevenueBody{
+                height: 100% !important;
+                width: 50%;
+                /* background: pink; */
+              }
+
+              .RevenueBody{
+                justify-content: flex-end !important;
+              }
+            }
+
+            .TotalSales{
+              flex-direction: row !important;
+              /* width: 100% !important; */
+              /* flex-direction: row !important; */
+              /* background: orange !important; */
+              /* background: red !important; */
+              .TotalSalesHead, .TotalSalesBody{
+                height: 100% !important;
+                width: 50% !important;
+              }
+
+              .TotalSalesBody{
+                justify-content: flex-end;
+                padding-bottom: 25px;
+              }
+
+            }
+          }
+        }
+
+        .OrderListTable{
+          /* background: orange !important; */
+          overflow: auto;
+          align-items: flex-start;
+
+          .OrderSub{
+            width: 250vw;
+            min-width: 250vw;
+          }
+        }
+      }
+    }
+}
+
+
+.Mobile{
+  display: none !important;
+}
