@@ -1,3 +1,5 @@
+//this as the name indicate is the redux store
+
 import { configureStore } from '@reduxjs/toolkit';
 import siteRenders from './conditions'
 

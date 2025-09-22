@@ -1,3 +1,5 @@
+//This is the file for all the dummy data
+
 export const fakeNotification = [
   {
     img:'',

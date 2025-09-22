@@ -1,3 +1,5 @@
+//this is the redux file to create the global state variable
+
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {

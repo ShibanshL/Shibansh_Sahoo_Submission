@@ -1,3 +1,6 @@
+//this file is for the sidebar we use on this website, it is also manipulated with
+//a redux boolean variable
+
 import { GoDotFill } from "react-icons/go";
 import { FaChevronRight } from "react-icons/fa";
 import { useSelector, useDispatch } from 'react-redux';
@@ -19,10 +22,13 @@ const SubPages = [
 ]
 
 function Sidebar() {
+  //redux variables
   const sideBar = useSelector((state:any) => state.toggleSite.sideBar)
   const theme = useSelector((state:any) => state.toggleSite.theme)
-  const screenWidth = useScreenWidth()
   const dispatch = useDispatch()
+  //custom hook
+  const screenWidth = useScreenWidth()
+  //navigation
   const nav = useNavigate()
   
   return (

@@ -1,3 +1,5 @@
+//this here is the home page, the default page with all the charts and info as required.
+
 import { FaArrowTrendDown, FaArrowTrendUp } from "react-icons/fa6";
 import { useSelector } from 'react-redux';
 import PieChartSVG from '../assets/pieChart.svg'
@@ -5,6 +7,7 @@ import WorldMapSvg from '../assets/worldMap.svg'
 import {fakeData,stackBarChart,fakeRevLocation,fakeSales} from '../components/FakeData'
 
 function HomePage() {
+  //redux variable
   const theme = useSelector((state:any) => state.toggleSite.theme)
 
   return (

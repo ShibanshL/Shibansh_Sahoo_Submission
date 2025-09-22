@@ -1,3 +1,6 @@
+//this is the main body file within which the default page and order page are rendered
+//with react router
+
 import { Routes, Route} from 'react-router'
 import HomePage from '../pages/HomePage'
 import OrderList from '../pages/OrderList'
@@ -15,9 +18,12 @@ import { useNavigate } from 'react-router';
 import useScreenWidth from '../customHook/getScreenWidth';
 
 function MainBody() {
+  //redux varables
   const theme = useSelector((state:any) => state.toggleSite.theme)
   const dispatch = useDispatch()
+  //navigation
   const nav = useNavigate()
+  //custom hook for screen size
   const screenWidth = useScreenWidth()
   return (
     <div className={`centerCol MainBody ${theme && 'darkMode'}`}

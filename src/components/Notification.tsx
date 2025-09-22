@@ -1,3 +1,6 @@
+//this file is for the notification bar we use on this website, it is manipulated with
+//a redux boolean variable
+
 
 import { useSelector } from 'react-redux';
 import useScreenWidth from '../customHook/getScreenWidth';
@@ -7,11 +10,9 @@ import { dynamicIcons_Notify } from './DynamicFunc';
 
 
 function Notification() {
-
+  //redux variables
   const notifyBar = useSelector((state:any) => state.toggleSite.notifyBar)
   const screenWidth = useScreenWidth();
-
-  
   return (
     <div className={`centerCol Notification ${notifyBar ?`${screenWidth > 1200 && 'hidden display-none'}`:`${screenWidth > 1200 && 'nothidden notdisplay-none'}`}`}>
       <div className="centerCol Notify">

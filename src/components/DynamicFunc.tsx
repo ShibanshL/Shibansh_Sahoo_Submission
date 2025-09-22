@@ -1,3 +1,5 @@
+//This is the file used for dynamic imports of texts or icons as per the requirement.
+
 import { PiChartPieSlice } from "react-icons/pi";
 import { useSelector } from 'react-redux';
 import { FiShoppingCart } from "react-icons/fi";

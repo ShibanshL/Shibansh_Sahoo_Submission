@@ -1,3 +1,5 @@
+//this is here is the order list page which shows us a table of users via which we can sort through
+
 import { useEffect, useState } from 'react'
 import { CiCalendar, CiSearch } from "react-icons/ci";
 import { useSelector } from 'react-redux';
@@ -9,28 +11,34 @@ import { TiTick } from "react-icons/ti";
 import { fakeWork,fakeDate, StatusText  } from '../components/DynamicFunc';
 
 function OrderList() {
+  //redux variables
   const theme = useSelector((state:any) => state.toggleSite.theme)
-  const [users, setUsers]:any = useState([])
-  const [paginatedUsers, setPaginatedUsers]:any = useState([])
-  const [page, setPage] = useState(1)
-  const [loading, setLoading] = useState(false)
-  const [search, setSearch] = useState('')
-  const [selected, setSelected]:any = useState([])
 
-   const manageUsers = (e:string) => {
-        if(!selected.includes(e)){
-            setSelected((prev:string) => [...prev,e])
-        }
-        if(selected.includes(e)){
-            let array = [...selected]; 
-            let index = array.indexOf(e)
-            if (index !== -1) {
-                array.splice(index, 1);
-                setSelected(array);
-            }
-        }
-    }
+  //state variables
+  const [users, setUsers]:any = useState([]) //all of the users
+  const [paginatedUsers, setPaginatedUsers]:any = useState([]) //paginated users for the table
+  const [page, setPage] = useState(1) //page number for pagination
+  const [loading, setLoading] = useState(false) //boolean variable for loading
+  const [search, setSearch] = useState('') //search variable for user search
+  const [selected, setSelected]:any = useState([]) //array variable if user selects a user
 
+  //this function checks if a particular user is selected or not, if selected it removes
+  //the user and if not selected it adds the user to the selected array
+  const manageUsers = (e:string) => {
+      if(!selected.includes(e)){
+          setSelected((prev:string) => [...prev,e])
+      }
+      if(selected.includes(e)){
+          let array = [...selected]; 
+          let index = array.indexOf(e)
+          if (index !== -1) {
+              array.splice(index, 1);
+              setSelected(array);
+          }
+      }
+  }
+
+  //this is the fetch request sent to an api that provides us the users
   useEffect(() => {
     const getUsers = async () => {
     setLoading(true)
@@ -45,13 +53,15 @@ function OrderList() {
     getUsers()
   }, []); 
 
+  //this here manages paginations and search
   useEffect(() => {
-   
+
+    //here the number of user fetched is being broken down to be paginated
     const startIndex = (page - 1) * 10;
     const currentItems = users.slice(startIndex, startIndex + 10);
-
     setPaginatedUsers(currentItems)
-    
+
+    //here if user us searching something. the code sorts through user array to find result
     if(search){
           setPaginatedUsers(users.filter((e:any) => {
           return e.firstName.toLowerCase().includes(search.toLowerCase()) || e.lastName.toLowerCase().includes(search.toLowerCase());

@@ -1,3 +1,6 @@
+//this is a custom hook i made to find the screen width at any given time to add some
+//extra conrtrol to me over the website.
+
 import { useState, useEffect } from 'react';
 
 function useScreenWidth() {
